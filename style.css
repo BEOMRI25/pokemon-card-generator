@@ -1,0 +1,123 @@
+:root {
+    --type-one-color: rgba(51, 105, 177, .2);
+    --type-one-text-color: var(--pokemon-dark-blue);
+    --type-two-color: rgba(51, 105, 177, .2);
+    --type-two-text-color: var(--pokemon-dark-blue);
+    --pokemon-blue: rgba(51, 105, 177, 1);
+    --pokemon-yellow: #FFCB05;
+    --pokemon-dark-yellow: #C7A008;
+    --pokemon-dark-blue: #1D2C5E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--pokemon-dark-blue);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 105, 177, .05);
+    gap: 2em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: 2.5 / 3.5;
+    width: 90vw;
+    max-width: 400px;
+    background-image: radial-gradient(circle at top, var(--type-one-color) 40%, white 40%);
+    border-radius: 0.8em;
+    box-shadow: 0 0.8em 1.6em rgba(51, 105, 177, .15);
+    position: relative;
+}
+
+button {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 0.6em 1.2em;
+    border: 0.4em solid var(--pokemon-blue);
+    color: var(--pokemon-blue);
+    background-color: var(--pokemon-yellow);
+    box-shadow: inset 0 0.25em 0 var(--pokemon-dark-yellow), 0 0.4em 0 var(--pokemon-dark-blue);
+    border-radius: 0.6em;
+}
+
+.hp {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: rgba(255, 255, 255, .9);
+    padding: 0.8em 1.6em;
+    border-radius: 2em;
+    border: 0.1em solid var(--pokemon-dark-blue);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.hp-num {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-inline-start: 0.2em;
+}
+
+img {
+    width: 90%;
+    padding: 5% 5% 0 5%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.types {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.type {
+    padding: 0.4em 0.8em;
+    border-radius: 1em;
+}
+
+.type.one {
+    background-color: var(--type-one-color);
+    color: var(--type-one-text-color)
+}
+
+.type.two {
+    background-color: var(--type-two-color);
+    color: var(--type-two-text-color); 
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.stat {
+    font-weight: 700;
+    font-size: 1.5em;
+}
